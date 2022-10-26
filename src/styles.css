@@ -1,0 +1,76 @@
+.app {
+  margin-top: 50px;
+  font-family: sans-serif;
+  text-align: center;
+  user-select: none;
+}
+
+.main,
+.parent,
+.child {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.main {
+  position: relative;
+  justify-content: space-around;
+  width: 750px;
+  margin: auto;
+}
+
+.parent {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+}
+
+.parent:nth-child(1) {
+  background-color: #61dafb;
+  border: 1px solid #00b0f0;
+}
+
+.parent:nth-child(2) {
+  background-color: #be61fb;
+  border: 1px solid #7030a0;
+}
+
+.child {
+  justify-content: center;
+  flex-direction: column;
+  background-color: #bebec0;
+  border: 1px solid #767171;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+}
+
+.parent::before {
+  content: "<Parent/>";
+  position: absolute;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  top: 25px;
+}
+
+.child::before {
+  content: "<Child/>";
+  margin-top: -20px;
+  margin-bottom: 55px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button {
+  margin-top: 30px;
+  background-color: #ddd;
+  border: 1px solid darkgray;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
